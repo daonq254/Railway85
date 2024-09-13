@@ -1,0 +1,83 @@
+----------------------------- Buổi 1 -----------------------------
+Frontend Basic:
+    HTML
+    CSS
+    JS
+
+ReactJS:    
+    TypeScripts
+    JS extra
+    ReactJS
+
+Đánh giá cuối học phần:
+    Hoàn thành 1 giao diện ReactJS
+
+-- TypeScripts --
+    Khai báo 1 biến myName trong JavaScipts:  'daonq' ?
+        const myName = "daonq"
+        let myName = "daonq"
+        var myName = "daonq"
+        var myAge = 20
+
+    Khai báo 1 đối tượng student1, có các thuộc tính id=1, name='daonq1', address='HN'
+        let student1 = 
+            {
+                id: 1,
+                name: "daonq1",
+                address: "HN"
+            };
+        let student2 = 
+            {
+                id: 2,
+                name: "daonq2",
+                address: "HN"
+            };
+
+           let student3 = 
+            {
+                id: 2,
+                name_: "daonq2",
+                address: "HN"
+            };
+    JavaScipts != Java
+        Java:
+            String myName = "daonq"
+            int    myAge = 20;
+            Class(thuộc tính, phương thức) ==> Instant
+    
+    JavaScipts:
+        Khai báo biến: Không cần định kiểu, kiểu dữ liệu sẽ được tự nhận khi gán giá trị
+        Về đối tượng, thì tạo trực tiếp, không cần thông qua Class
+
+    Vấn đề JavaScipts??
+    Mong muốn: JavaScipts  ==> TypeScripts
+    TypeScripts:
+        Chỉ là 1 phiên bản nâng cấp của JavaScipts, hướng tới việc khai báo tường minh về kiểu dữ liệu, hướng tới
+            việc sử dụng đối tượng, OOP 1 cách rõ ràng hơn(rất giống Java)
+    
+        Phục vụ cho người lập trình viên
+        Trình duyệt chỉ hiểu: HTML CSS JS
+        Cần phải chuyển đổi đoạn mã TypeScripts ==> JavaScipts trước khi chạy trên trình duyệt?
+        Demo TS, JS?
+            Cách 1:
+                .js
+                var myName ="daonq",
+                console.log(myName)
+                Tạo file: index.html
+                link file .js vào file index.html
+            Cách 2:
+                Sử dụng môi trường NodeJS để chạy trực tiếp các file JS
+        Cài đặt:
+            NodeJS: https://nodejs.org/ 
+                    node -v
+            npm: Quản lý các gói cài đặt
+                    npm -v 
+            TypeScripts: npm install -g typescript
+                         tsc --version
+
+        Demo chương trình TS đầu tiên
+        Kiểu dữ liệu: number, string, boolean, void, undefined, null
+        Chạy: 
+            Cần chuyển đổi file TS ==> file JS ==> Chạy file JS
+            tsc tên_File(tsc .\demo1.ts)  ==> tạo ra 1 file .js
+            node .\demo1.js
