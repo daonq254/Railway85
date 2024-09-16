@@ -81,3 +81,48 @@ ReactJS:
             Cần chuyển đổi file TS ==> file JS ==> Chạy file JS
             tsc tên_File(tsc .\demo1.ts)  ==> tạo ra 1 file .js
             node .\demo1.js
+
+
+----------------------------- Buổi 2 -----------------------------
+OOP trong TypeScripts
+    Class:
+        Thuộc Tính
+        Phương thức
+        Contructor
+    Instant: new
+
+    Tính đóng gói: private, getter(), setter()
+    Tính kế thừa
+    Tính đa hình: Override & Overload
+    Tính trừu tượng: abtraction
+
+    Access modifier
+        public
+        protected
+        default
+        private
+
+    Demo OOP TypeScripts:
+        Xây dựng chương trình để quản lý các bạn học viên ở trong lớp Railway85
+        Tạo Person: id, name, address,...
+        Tạo ra các Instant: student1, student2,...
+        In thông tin các bạn học viên ra màn hình
+
+Export, Import trong JS
+    Cách 1: 
+        export {a,b,...}
+        import {a,b,..} from 'file'
+    Cách 2: Sử dụng từ khoá export ngay đầu thành phần cần export
+    Cách 3: 
+        export default
+        import alias from "./tenFile";
+
+Cấu trúc cộng chuỗi trong JS
+    VD: "ID: " + person2.id
+    Cách khác: Viết theo Template String
+        `ID: ${person2.id} Name: ${person2.name} Address: ${person2.address}`
+
+1 Số Tool nên sử dụng
+    Format code: Prettier - Code formatter
+    Tool TypeScripts: TypeScript Toolbox
+        Ctrl + Ship + P
