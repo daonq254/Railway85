@@ -126,3 +126,25 @@ Cấu trúc cộng chuỗi trong JS
     Format code: Prettier - Code formatter
     Tool TypeScripts: TypeScript Toolbox
         Ctrl + Ship + P
+
+----------------------------- Buổi 3- JavaScipts Mở rộng -----------------------------
+1. scope trong JavaScipts
+    Global scope: Sau khi khai báo thì được sử dụng trong toàn bộ chương trình
+    Function scope (Local scope): Sau khi khai báo chỉ được sử dụng trong phạm hàm
+2. var & let & const trong JavaScipts
+    var & let: Khai báo biến trong chương trình
+        ReDeclare: Khai báo lại
+        ReAssign: Gán lại giá trị
+        Hosting: Sử dụng 1 biến trước khi khai báo
+        var: ReDeclare, Hosting
+
+3. Destructuring: Phá vỡ cấu trúc
+    Object
+    Mảng
+
+4. Spread ...
+    Object
+5. Function
+    Arrow Function
+
+6. map()
