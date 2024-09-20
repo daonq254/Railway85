@@ -148,3 +148,23 @@ Cấu trúc cộng chuỗi trong JS
     Arrow Function
 
 6. map()
+
+----------------------------- Buổi 4- JavaScipts Mở rộng -----------------------------
+1. Higher Order Function HOF: 
+    Hàm hoạt động trên các hàm khác
+    1 hàm có thể nhận 1 hàm khác làm tham số, và sau khi xử xong thì có thể trả 1 hàm khác
+    function(a,b,function()){
+        ..
+        ..
+        ..
+        return function()
+    }
+
+2. Bất đồng bộ và xử lý bất đồng bộ trong JavaScipts
+    Chương trình đồng bộ?
+    Callback Hell?
+    Promise:
+        then
+        reject
+        resolve
+    Demo: Call API Sử dụng promise?
