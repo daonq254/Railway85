@@ -167,4 +167,54 @@ Cấu trúc cộng chuỗi trong JS
         then
         reject
         resolve
-    Demo: Call API Sử dụng promise?
+        Demo: Call API Sử dụng promise?
+
+    async/await 
+
+----------------------------- Buổi 5- ReactJS -----------------------------
+1. ReactJS
+    Thư viện hỗ trợ xử lý giao diện(Frontend)
+    Ưu điểm:
+        Hoạt động mượt hơn.
+        Tái sử dụng
+    Phân chia: Giao diện lớn ==> Giao diện nhỏ hơn ==> nhỏ ==>...
+    Component
+
+2. Tạo 1 dự ReactJS
+        create-react-app: Công cụ(tool) hỗ trợ cho bạn tạo ra 1 dự án ReactJS
+        npm install -g create-react-app: Cài đặt công cụ create-react-app
+
+        Sử dụng create-react-app tạo ra dự án ReactJS đầu tiên: demo1
+            create-react-app demo1
+        Chạy dự án
+            Chuyển vào thư mục dự án:
+                cd G:\DemoVTI\Railway85\REACTJS\demo1\demo1
+                npm start
+3. Cấu trúc dự án
+    Node modules
+    public
+        index.html
+    src 
+        index.js
+        app.js
+    ==> Thay đổi nôi dung ==> Hello VTI
+
+    Xoá các file không cần thiết
+
+4. Component
+
+    import "./App.css";
+
+    function App() {
+        return (
+            <div className="App">
+            <h1>Hello VTI</h1>
+            </div>
+        );
+        }
+
+    export default App;
+
+    Mã???
+
+
