@@ -208,7 +208,7 @@ Cấu trúc cộng chuỗi trong JS
     function App() {
         return (
             <div className="App">
-            <h1>Hello VTI</h1>
+                <h1>Hello VTI</h1>
             </div>
         );
         }
@@ -216,5 +216,74 @@ Cấu trúc cộng chuỗi trong JS
     export default App;
 
     Mã???
+----------------------------- Buổi 5- ReactJS -----------------------------
+1.   React.createElement(..,..,..)==> Hàm dùng tạo các thành html cho trang web
+    Nhược điểm: Khó viết
+
+    JSX: JavaScipts Extension, Có cấu trúc gần giống với mã HTML(90%) hỗ trợ cho việc tạo ra các Component 1 cách dễ dàng hơn
+    JSX không chạy trực tiếp được trên trình duyệt
+    Phải có 1 thẻ cha bao bọc lại tất cả các thẻ con
+        Thẻ Fragment: Trong suốt, chỉ có tác dụng đảm bảo cấu trúc cha con của JSX
+         <React.Fragment>
+            ...
+         </React.Fragment>
+
+         <>
+            ...
+         </>
+
+2.  Thực hiện CSS cho Component?
+    
+    Viết thuộc tính CSS trong cùng thẻ
+         style={
+                {
+                color: "red",
+                backgroundColor: "blue",
+                width: "200px",
+                height: "200px",
+                }
+            }
+        Với những thuộc tính CSS dài ==> Camel Case
+    Viết vào đầu file 
+        let divStyle = {
+            color: "red",
+            backgroundColor: "blue",
+            width: "200px",
+            height: "200px",
+        };
+    Tạo file .css==> link
+        import "./App.css";
 
 
+3.  Thực hiện bắt và xử lý sự kiện trong ReactJS?
+    Tên của sự kiện:
+        onClick: Viết hoa phần chữ cái sự kiện
+    // Viết hàm xử lý sự kiện
+        let handleClick = () => {
+            //
+            alert("Hello VTI");
+        };
+     onClick={handleClick}
+
+4. Sử dụng thư viện Bootstrap trong xây dựng giao diện  ReactJS
+    Tổng hợp HTML CSS JS
+    Hỗ trợ cho việc xây dựng 1 cách nhanh chóng và đẹp mắt
+        Các thành phần được xây dựng sẵn
+            Khi cần sử dụng ==> Vào trang Bootstrap tìm kiếm, copy các đoạn code, chú ý tới tên các Class
+            Tool: bs3-...
+        Phân chia bố cục nhanh chóng
+
+    Tool hỗ trợ: Boostrap 3 Code Bootstrap 3 Snippets
+    Import Boostrap vào dự án
+            <link
+            rel="stylesheet"
+            media="screen"
+            href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
+            <script src="//code.jquery.com/jquery.js"></script>
+            <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+        Tool: bs3-cdn
+
+    
+
+         
