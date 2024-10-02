@@ -1,5 +1,7 @@
 import "./App.css";
 import React from "react";
+import Vti from "./Components/Vti";
+import Daonq from "./Components/Daonq";
 
 function App() {
   // Logic
@@ -19,21 +21,85 @@ function App() {
   // };
   //
   return (
-    <div className="container">
-      {/* Menu */}
-      <div>
-        <div style={{ backgroundColor: "blue" }}>Menu1</div>
-        <div style={{ backgroundColor: "black" }}>Menu2</div>
-      </div>
-      {/* Banner */}
-      <div style={{ backgroundColor: "orange" }}>Banner</div>
-      {/* Content */}
-      <div>
-        <div style={{ backgroundColor: "blueviolet" }}>Content1</div>
-        <div style={{ backgroundColor: "green" }}>Content2</div>
-        <div style={{ backgroundColor: "yellow" }}>Content3</div>
-      </div>
+    <div class="container">
+      {/* <h2>Hello VTI </h2> */}
+      <Vti />
+      <Daonq />
     </div>
+
+    // <div class="container">
+    //   {/* Menu */}
+    //   <div class="row">
+    //     <div
+    //       class="col-xs-6 col-sm-6 col-md-6 col-lg-6"
+    //       style={{ backgroundColor: "blue" }}
+    //     >
+    //       Menu1
+    //     </div>
+
+    //     <div
+    //       class="col-xs-6 col-sm-6 col-md-6 col-lg-6"
+    //       style={{ backgroundColor: "black" }}
+    //     >
+    //       Menu2
+    //     </div>
+    //   </div>
+    //   {/* Banner */}
+
+    //   <div class="row">
+    //     <div
+    //       class="col-xs-12 col-sm-12 col-md-12 col-lg-12"
+    //       style={{ backgroundColor: "orange" }}
+    //     >
+    //       Banner
+    //     </div>
+    //   </div>
+    //   {/* Content */}
+
+    //   <div class="row">
+    //     <div
+    //       class="col-xs-4 col-sm-4 col-md-4 col-lg-4"
+    //       style={{ backgroundColor: "blueviolet" }}
+    //     >
+    //       <div class="row" style={{ backgroundColor: "green" }}>
+    //         Content 11
+    //       </div>
+    //       <div class="row" style={{ backgroundColor: "yellow" }}>
+    //         Content 12
+    //       </div>
+    //     </div>
+
+    //     <div
+    //       class="col-xs-4 col-sm-4 col-md-4 col-lg-4"
+    //       style={{ backgroundColor: "yellow" }}
+    //     >
+    //       Content2
+    //     </div>
+
+    //     <div
+    //       class="col-xs-4 col-sm-4 col-md-4 col-lg-4"
+    //       style={{ backgroundColor: "green" }}
+    //     >
+    //       Content3
+    //     </div>
+    //   </div>
+    // </div>
+
+    // <div className="container">
+    //   {/* Menu */}
+    //   <div>
+    //     <div style={{ backgroundColor: "blue" }}>Menu1</div>
+    //     <div style={{ backgroundColor: "black" }}>Menu2</div>
+    //   </div>
+    //   {/* Banner */}
+    //   <div style={{ backgroundColor: "orange" }}>Banner</div>
+    //   {/* Content */}
+    //   <div>
+    //     <div style={{ backgroundColor: "blueviolet" }}>Content1</div>
+    //     <div style={{ backgroundColor: "green" }}>Content2</div>
+    //     <div style={{ backgroundColor: "yellow" }}>Content3</div>
+    //   </div>
+    // </div>
     // <div style={divStyle}>
     // <>
     //   <div>

@@ -216,7 +216,7 @@ Cấu trúc cộng chuỗi trong JS
     export default App;
 
     Mã???
------------------------------ Buổi 5- ReactJS -----------------------------
+----------------------------- Buổi 6- ReactJS -----------------------------
 1.   React.createElement(..,..,..)==> Hàm dùng tạo các thành html cho trang web
     Nhược điểm: Khó viết
 
@@ -271,7 +271,8 @@ Cấu trúc cộng chuỗi trong JS
         Các thành phần được xây dựng sẵn
             Khi cần sử dụng ==> Vào trang Bootstrap tìm kiếm, copy các đoạn code, chú ý tới tên các Class
             Tool: bs3-...
-        Phân chia bố cục nhanh chóng
+        Phân chia bố cục nhanh chóng    
+            
 
     Tool hỗ trợ: Boostrap 3 Code Bootstrap 3 Snippets
     Import Boostrap vào dự án
@@ -285,5 +286,52 @@ Cấu trúc cộng chuỗi trong JS
         Tool: bs3-cdn
 
     
+----------------------------- Buổi 7- ReactJS -----------------------------
+1. Component
+    Phân chia giao diện thành các Component nhỏ hơn.
+    Tạo nhanh Component: 
+        Cài đặt Extension: Reactjs code snippets
+        Tạo nhanh Component: rsf
+    Muốn phân chia Component:
+        Tạo 1 file .js, sau đó tạo cấu trúc Component:rsf
+        Để sử dụng, thực hiện Import vào nơi cùng dùng, gọi để sử dụng  
+            import Vti from "./Components/Vti";
+            <Vti />
 
-         
+    Functional Component
+    
+       function Vti(props) {
+            return (
+                <>
+                <h2>Hello VTI</h2>
+                </>
+            );
+            }
+
+        export default Vti;
+
+    Class Component 
+        Dùng phím tắt rcc
+        
+        class Daonq extends Component {
+        // hàm render
+        render() {
+            // logic
+            // logic
+            return (
+            <>
+                <h3>Hello DAONQ VTI</h3>
+            </>
+            );
+        }
+        }
+
+2. Áp dụng.
+3. Truyền dữ liệu giữa các Component
+    Component cha
+    Component con
+    1 số chiều truyền dữ liệu chính: 
+        Truyền dữ liệu từ cha xuống con:
+        
+        Truyền dữ liệu từ con về cha
+        Truyền dữ liệu giữa 2 Component cùng cấp
