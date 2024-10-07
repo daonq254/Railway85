@@ -286,7 +286,7 @@ Cấu trúc cộng chuỗi trong JS
         Tool: bs3-cdn
 
     
------------------------------ Buổi 7- ReactJS -----------------------------
+----------------------------- Buổi 7+8- ReactJS -----------------------------
 1. Component
     Phân chia giao diện thành các Component nhỏ hơn.
     Tạo nhanh Component: 
@@ -301,6 +301,8 @@ Cấu trúc cộng chuỗi trong JS
     Functional Component
     
        function Vti(props) {
+            //
+            //
             return (
                 <>
                 <h2>Hello VTI</h2>
@@ -331,7 +333,37 @@ Cấu trúc cộng chuỗi trong JS
     Component cha
     Component con
     1 số chiều truyền dữ liệu chính: 
-        Truyền dữ liệu từ cha xuống con:
-        
-        Truyền dữ liệu từ con về cha
-        Truyền dữ liệu giữa 2 Component cùng cấp
+        1. Truyền dữ liệu từ cha xuống con:
+            props:
+                Key-Value
+            Nhận lại dữ liệu ở Component con:
+            `    Nếu Component con được xây dựng theo hướng Class Component:
+                    this.props.tên_Key
+                Nếu Component con được xây dựng theo hướng Functional Component:
+                    props.tên_Key
+
+        2. Truyền dữ liệu từ con về cha
+            Sử dụng hàm Callback.
+            Thực hiện khai báo hàm callback bên Component cha, chú ý khai tham số đầu vào cho hàm để nhận lại dữ liệu
+            Truyền hàm Callback từ Component cha xuống Component con
+            Tại Component con, thực hiện gọi lại hàm Callback ở Cha thông qua props
+        3. Truyền dữ liệu giữa 2 Component cùng cấp
+            Không thể truyền dữ liệu giữa 2 Component cùng cấp
+    State?
+        - Giống như 1 biến trong chương trình, lưu trữ dữ liệu trong Class Component
+        - Khi dữ liệu lưu trữ trong State thay đổi, thì giao diện sẽ được tự động cập nhật dữ liệu mới
+        Khai báo state trong chương trình
+              constructor(props) {
+                    super(props);
+                    this.state = {
+                    click_number: 0,
+                    };
+                }
+        Sử dụng State:
+            this.state.tên_State
+        Cập nhật dữ liệu cho State:
+                this.setState({
+                    click_number: this.state.click_number + 1,
+                });
+        - Không sử dụng State trong Functional Component
+
