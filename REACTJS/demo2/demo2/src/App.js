@@ -85,6 +85,7 @@ class App extends Component {
 
   //
   render() {
+    let dataToTopChild = "dataToTopChild";
     return (
       <div className="container">
         <TopComponent
@@ -94,6 +95,7 @@ class App extends Component {
           student={this.student}
           headingTop={this.headingTop}
           getDataFromTop={this.getDataFromTop}
+          dataToTopChild={dataToTopChild}
         />
         <BottomComponent
           myClass="Railway 85"

@@ -349,6 +349,9 @@ Cấu trúc cộng chuỗi trong JS
             Tại Component con, thực hiện gọi lại hàm Callback ở Cha thông qua props
         3. Truyền dữ liệu giữa 2 Component cùng cấp
             Không thể truyền dữ liệu giữa 2 Component cùng cấp
+        4. Truyền dữ liệu thông qua nhiều tầng
+            Sử dụng Props để truyền lần lượt qua từng tầng
+
     State?
         - Giống như 1 biến trong chương trình, lưu trữ dữ liệu trong Class Component
         - Khi dữ liệu lưu trữ trong State thay đổi, thì giao diện sẽ được tự động cập nhật dữ liệu mới
@@ -367,3 +370,13 @@ Cấu trúc cộng chuỗi trong JS
                 });
         - Không sử dụng State trong Functional Component
 
+----------------------------- Buổi 9 ReactJS -----------------------------
+1. Xử lý Form trong ReactJS
+    Bước 1: Khai báo ra State để lưu trữ dữ liệu cho ô nhập liệu
+    Bước 2: Trong ô nhập liệu
+        Đặt thuộc tính value: value={this.state.data}
+        Bắt sự kiện onChange={this.handleChange}
+    Bước 3: Khai báo hàm xử lý sự kiện onCHange: handleChange
+            this.setState({
+                data: event.target.value,
+            });
