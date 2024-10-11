@@ -49,7 +49,7 @@ import "./App.css";
 import BottomComponent from "./Components/BottomComponent";
 import TopComponent from "./Components/TopComponent";
 
-class App extends Component {
+class AppContainer extends Component {
   //
   constructor(props) {
     super(props);

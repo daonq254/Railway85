@@ -380,3 +380,7 @@ Cấu trúc cộng chuỗi trong JS
             this.setState({
                 data: event.target.value,
             });
+2. Tìm hiểu về Life Cycle trong ReactJS
+
+----------------------------- Buổi 10 ReactJS -----------------------------
+1. Thực hành Mini Project
