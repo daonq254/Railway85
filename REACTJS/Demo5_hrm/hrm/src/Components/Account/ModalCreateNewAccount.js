@@ -3,9 +3,11 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import InputForm from "./InputForm";
 
 function ModalCreateNewAccount(props) {
+  // Destructuring
+  let { showForm } = props;
   return (
     <>
-      <Modal isOpen={true}>
+      <Modal isOpen={showForm}>
         <ModalHeader>
           <h3>Create New Account</h3>
         </ModalHeader>
