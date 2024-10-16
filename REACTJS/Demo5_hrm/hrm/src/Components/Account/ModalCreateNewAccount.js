@@ -4,7 +4,12 @@ import InputForm from "./InputForm";
 
 function ModalCreateNewAccount(props) {
   // Destructuring
-  let { showForm } = props;
+  let { showForm, onHandleCloseModal, onHandleCreateNewAccount } = props;
+  //
+  let handleClose = () => {
+    onHandleCloseModal();
+  };
+  //
   return (
     <>
       <Modal isOpen={showForm}>
@@ -12,10 +17,12 @@ function ModalCreateNewAccount(props) {
           <h3>Create New Account</h3>
         </ModalHeader>
         <ModalBody>
-          <InputForm />
+          <InputForm onHandleCreateNewAccount={onHandleCreateNewAccount} />
         </ModalBody>
         <ModalFooter>
-          <Button color="danger">Close</Button>
+          <Button color="danger" onClick={handleClose}>
+            Close
+          </Button>
         </ModalFooter>
       </Modal>
     </>
