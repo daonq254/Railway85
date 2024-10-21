@@ -435,3 +435,18 @@ Cấu trúc cộng chuỗi trong JS
         + useLayout()
         + useRef()
         + ...
+
+----------------------------- Buổi 12 ReactJS - Thực hành Mini Project -----------------------------
+       
+----------------------------- Buổi 13 ReactJS - React Router ---------------------------------------
+    - Xử lý liên quan tới việc định tuyến trong dự án.
+    - Cài đặt thư viện: npm install react-router-dom
+    - Cấu hình: 
+        - Vào file index.js
+            root.render(
+                <React.StrictMode>
+                    <BrowserRouter>
+                    <App />
+                    </BrowserRouter>  
+                </React.StrictMode>
+                );
