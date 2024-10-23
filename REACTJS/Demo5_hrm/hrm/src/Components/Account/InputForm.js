@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
 
 function InputForm(props) {
-  let { onHandleCreateNewAccount } = props;
+  let { onHandleCreateNewAccount, listDepartment, listPosition } = props;
+
+  // console.log("listDepartment_InputForm: ", listDepartment);
 
   //   Khai báo State lưu trữ giá trị của các ô nhập liệu
   let [Email, setEmail] = useState("");
@@ -18,19 +20,44 @@ function InputForm(props) {
     // console.log("Fullname: ", Fullname);
     // console.log("Department: ", Department);
     // console.log("Postion: ", Postion);
+    // let accountNew = {
+    //   id: 1,
+    //   email: Email,
+    //   username: Username,
+    //   fullname: Fullname,
+    //   department: Department,
+    //   postion: Postion,
+    //   createDate: "16/10/2024",
+    // };
+
+    //
+    //   {
+    //     "email": "daonq123_New@viettel.com",
+    //     "username": "daonq123_New",
+    //     "fullname": "daonq_New",
+    //     "departmentId": "3",
+    //     "positionId": "3"
+    // }
+
     let accountNew = {
-      id: 1,
       email: Email,
       username: Username,
       fullname: Fullname,
-      department: Department,
-      postion: Postion,
-      createDate: "16/10/2024",
+      departmentId: Department,
+      positionId: Postion,
     };
     onHandleCreateNewAccount(accountNew);
     // console.log("accountNew: ", accountNew);
   };
 
+  //
+  let departmentitems = listDepartment.map((dep) => {
+    return <option value={dep.id}>{dep.name}</option>;
+  });
+
+  let positionitems = listPosition.map((pos) => {
+    return <option value={pos.id}>{pos.name}</option>;
+  });
   //
   return (
     <>
@@ -92,11 +119,12 @@ function InputForm(props) {
               SetDepartment(event.target.value);
             }}
           >
-            <option value={"Bán hàng"}>Bán hàng</option>
-            <option value={"Bảo vệ"}>Bảo vệ</option>
+            {departmentitems}
+            {/* <option value={"Bán hàng"}>Bán hàng</option> */}
+            {/* <option value={"Bảo vệ"}>Bảo vệ</option>
             <option value={"Giám đốc"}>Giám đốc</option>
             <option value={"Kỹ thuật"}>Kỹ thuật</option>
-            <option value={"Marketing"}>Marketing</option>
+            <option value={"Marketing"}>Marketing</option> */}
           </Input>
         </FormGroup>
 
@@ -112,10 +140,11 @@ function InputForm(props) {
               SetPostion(event.target.value);
             }}
           >
-            <option value={"Dev"}>Dev</option>
+            {positionitems}
+            {/* <option value={"Dev"}>Dev</option>
             <option value={"Test"}>Test</option>
             <option value={"Scrum_Master"}>Scrum_Master</option>
-            <option value={"PM"}>PM</option>
+            <option value={"PM"}>PM</option> */}
           </Input>
         </FormGroup>
       </Form>
