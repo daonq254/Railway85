@@ -1,11 +1,11 @@
 import React from "react";
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from "reactstrap";
 import InputForm from "./InputForm";
-
+import { useSelector } from "react-redux";
 function ModalCreateNewAccount(props) {
   // Destructuring
   let {
-    showForm,
+    // showForm,
     onHandleCloseModal,
     onHandleCreateNewAccount,
     listDepartment,
@@ -16,6 +16,12 @@ function ModalCreateNewAccount(props) {
     onHandleCloseModal();
   };
   //
+  let stateRedux = useSelector((state) => state);
+  console.log("stateRedux: ", stateRedux);
+  let showForm = stateRedux.formReducer.showForm;
+
+  //
+
   return (
     <>
       <Modal isOpen={showForm}>

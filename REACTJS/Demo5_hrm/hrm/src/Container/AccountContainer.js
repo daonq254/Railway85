@@ -6,27 +6,36 @@ import Axios from "axios";
 import { addAccountNewAPI, getListAccountAPI } from "../API/AccountApi";
 import { getListDepartmentAPI } from "../API/DepartmentApi";
 import { getListPositionAPI } from "../API/PositonApi";
+import { useDispatch } from "react-redux";
+import {
+  actionCloseInputForm,
+  actionShowInputForm,
+} from "../Redux/Action/FormAction";
 
 function AccountContainer(props) {
   // Khai báo 1 state để quản lý việc ẩn hiện của Modal
-  let [showForm, setShowform] = useState(false);
+  // let [showForm, setShowform] = useState(false);
   // Khai báo State để quản lý danh sách Account trên hệ thống
   let [listAccount, setListAccount] = useState([]);
   // Khai báo State để quản lý danh sách Account trên hệ thống
   let [listDepartment, setListDepartment] = useState([]);
   // Khai báo State để quản lý danh sách Account trên hệ thống
   let [listPosition, setListPosition] = useState([]);
+  //
+  let dispatchRedux = useDispatch();
   // Khai báo hàm Callback
   let onHandleCreateButton = () => {
     //
     // console.log("Gọi hàm onHandleCreateButton");
-    setShowform(true);
+    // setShowform(true);
+    dispatchRedux(actionShowInputForm());
   };
 
   // Khai báo hàm Callback xử khi người dùng nhấn nút Close bên Modal
   let onHandleCloseModal = () => {
     //
-    setShowform(false);
+    // setShowform(false);
+    dispatchRedux(actionCloseInputForm());
   };
   // Khai báo hàm Callback xử khi người dùng nhấn nút Create New Account bên Modal
   let onHandleCreateNewAccount = (account_New) => {
@@ -62,7 +71,8 @@ function AccountContainer(props) {
       fetchListAccount();
     });
 
-    setShowform(false);
+    // setShowform(false);
+    dispatchRedux(actionCloseInputForm());
   };
 
   let fetchListAccount = () => {
@@ -123,7 +133,7 @@ function AccountContainer(props) {
     <div>
       <CreateButton onHandleCreateButton={onHandleCreateButton} />
       <ModalCreateNewAccount
-        showForm={showForm}
+        // showForm={showForm}
         onHandleCloseModal={onHandleCloseModal}
         onHandleCreateNewAccount={onHandleCreateNewAccount}
         listDepartment={listDepartment}
