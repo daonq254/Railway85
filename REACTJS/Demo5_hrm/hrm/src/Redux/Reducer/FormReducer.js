@@ -3,7 +3,8 @@ import { CLOSE_INPUT_FORM, SHOW_INPUT_FORM } from "../Contant/FormActionType";
 // Bước 3: Khai báo các State cần quản lý
 let intinalState = {
   showForm: false,
-  // a: "daonq",
+  a: "daonq",
+  b: "VTI",
   //   ...
 };
 
