@@ -11,6 +11,7 @@ import {
   actionCloseInputForm,
   actionShowInputForm,
 } from "../Redux/Action/FormAction";
+import { actionFetchListAccountAPI } from "../Redux/Action/AccountAction";
 
 function AccountContainer(props) {
   // Khai báo 1 state để quản lý việc ẩn hiện của Modal
@@ -124,7 +125,10 @@ function AccountContainer(props) {
     //   setListAccount(listAccount_LocalStorage);
     // }
     // Load dữ liệu từ DB, Call API
-    fetchListAccount();
+    // fetchListAccount();
+    // Gửi lên Store Redux 1 Action
+    dispatchRedux(actionFetchListAccountAPI());
+    //
     fetchListDepartment();
     fetchListPosition();
   }, []);
@@ -139,7 +143,7 @@ function AccountContainer(props) {
         listDepartment={listDepartment}
         listPosition={listPosition}
       />
-      <ResultForm listAccount={listAccount} />
+      <ResultForm />
     </div>
   );
 }

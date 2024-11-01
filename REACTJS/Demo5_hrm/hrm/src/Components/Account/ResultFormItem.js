@@ -1,9 +1,12 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Button } from "reactstrap";
 
 function ResultFormItem(props) {
-  let { listAccount } = props;
-  console.log("listAccount_ResultFormItem: ", listAccount);
+  // let { listAccount } = props;
+  // console.log("listAccount_ResultFormItem: ", listAccount);
+  let stateRedux = useSelector((state) => state);
+  let listAccount = stateRedux.accountReducer.listAccount;
 
   let items = listAccount.map((account, index) => {
     return (
